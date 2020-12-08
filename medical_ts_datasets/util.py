@@ -135,7 +135,7 @@ class MedicalTsDatasetBuilder(tfds.core.GeneratorBasedBuilder):
 
             if self.add_measurements_and_lengths:
                 measurements = tf.math.is_finite(time_series)
-                length = tf.shape(time)[0]
+                length = tf.shape(input=time)[0]
                 return {
                     'combined': (
                         demographics,
